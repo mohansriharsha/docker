@@ -5,9 +5,11 @@ Is is build on the [kwikapi App](https://github.com/deep-compute/kwikapi) framew
 
 ## Usage
 
+### Using CLI
+
 1. Build docker image
 ```
-docker build . -t <tag-name> -f Dockerfile.calc
+docker build . -t <tag-name> -f Dockerfile
 ```
 
 2. Run the docker image
@@ -23,4 +25,15 @@ URL: http://localhost:5000/api/v1/add?a=1&b=4
 - In terminal:
 ```
 wget -O - --quiet "http://localhost:5000/api/v1/add?a=1&b=4"
+```
+
+### Using docker-compose
+
+1. Using local build
+```
+docker-compose -f calc_compose_1.yaml
+```
+2. Using the image
+```
+docker-compose -f calc_compose_2.yaml
 ```
