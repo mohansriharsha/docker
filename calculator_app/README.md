@@ -5,17 +5,11 @@ Is is build on the [kwikapi App](https://github.com/deep-compute/kwikapi) framew
 
 ## Usage
 
-<<<<<<< HEAD
 ### Using CLI
 
 1. Build docker image
 ```
 docker build . -t <tag-name> -f Dockerfile
-=======
-1. Build docker image
-```
-docker build . -t <tag-name> -f Dockerfile.calc
->>>>>>> 4a0e165b7f6acfd265ee16db955219e1a0eba1bc
 ```
 
 2. Run the docker image
@@ -27,12 +21,11 @@ docker run -p <machine-port>:<app-port> <tag-name>
 
 3. Test APIs
 - In browser:
-URL: http://localhost:5000/api/v1/add?a=1&b=4
+URL: http://localhost:<machine-port>/api/v1/add?a=1&b=4
 - In terminal:
 ```
-wget -O - --quiet "http://localhost:5000/api/v1/add?a=1&b=4"
+wget -O - --quiet "http://localhost:<machine-port>/api/v1/add?a=1&b=4"
 ```
-<<<<<<< HEAD
 
 ### Using docker-compose
 
@@ -44,5 +37,3 @@ docker-compose -f calc_compose_1.yaml
 ```
 docker-compose -f calc_compose_2.yaml
 ```
-=======
->>>>>>> 4a0e165b7f6acfd265ee16db955219e1a0eba1bc
